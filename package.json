@@ -1,0 +1,36 @@
+{
+  "name": "fsaction",
+  "version": "1.0.0",
+  "description": "Flux Standard Action object creator.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "release": "standard-version -i \"changelog.md\" -t \"\"",
+    "lint": "xo",
+    "test": "npm run lint && ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darsain/fsaction.git"
+  },
+  "keywords": [
+    "flux",
+    "redux",
+    "action"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darsain/fsaction/issues"
+  },
+  "homepage": "https://github.com/darsain/fsaction#readme",
+  "dependencies": {
+    "is-error": "^2.2.1"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "standard-version": "^4.0.0-1",
+    "xo": "^0.17.1"
+  }
+}
