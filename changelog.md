@@ -4,8 +4,3 @@ All notable changes to this project will be documented in this file. See [standa
 
 <a name="1.0.0"></a>
 # 1.0.0 (2016-11-29)
-
-
-### Features
-
-* Initial release ([dffdd18](https://github.com/darsain/fsaction/commit/dffdd18))
