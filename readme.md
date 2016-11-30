@@ -16,7 +16,7 @@ import fsaction from 'fsaction';
 expect(fsaction('INCREMENT')).to.deep.equal({
 	type: 'INCREMENT'
 });
-expect(fsaction('INCREMENT'), 42).to.deep.equal({
+expect(fsaction('INCREMENT', 42)).to.deep.equal({
 	type: 'INCREMENT',
 	payload: 42
 });
@@ -44,7 +44,7 @@ expect(fsaction('INCREMENT', (action) => 42, (action) => 'foo'))).to.deep.equal(
 When `payload` or `meta` are functions, they - and any functions they return - will be called until something else than a function is returned.
 
 ```js
-expect(fsaction('INCREMENT', () => () => () => () => () => 42))).to.deep.equal({
+expect(fsaction('INCREMENT', () => () => () => 42))).to.deep.equal({
 	type: 'INCREMENT',
 	payload: 42
 });
