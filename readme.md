@@ -65,6 +65,12 @@ In `meta()`, this object has `type`, maybe `payload`, and maybe `error` properti
 
 You should treat this object as read only, as that *is* the resulting FSA object, and modifying it in non-standard way will break FSA compliance.
 
+### fsaction.error(type: string, payload?: any, meta?: any) : object
+
+Forces `error` flag on the resulting action object.
+
+Aliases: `fsaction.err()`, `fsaction.e()`
+
 
 ## Why not [redux-actions](https://github.com/acdlite/redux-actions)?
 

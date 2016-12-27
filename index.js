@@ -1,6 +1,9 @@
 const isError = require('is-error');
 
-module.exports = function (type, payload, meta) {
+module.exports = fsa;
+fsa.e = fsa.err = fsa.error = fsaError;
+
+function fsa(type, payload, meta) {
 	if (!type) {
 		throw new Error('action type is required');
 	}
@@ -20,7 +23,13 @@ module.exports = function (type, payload, meta) {
 	}
 
 	return action;
-};
+}
+
+function fsaError() {
+	const action = fsa.apply(null, arguments);
+	action.error = true;
+	return action;
+}
 
 function unwrap(val, arg) {
 	while (typeof val === 'function') {
